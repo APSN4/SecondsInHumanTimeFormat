@@ -73,16 +73,40 @@ def _text(number, name, words):
 _outputString = ""
 if resultCenturies != 0:
     _outputString += str(resultCenturies) + " " + _text(resultCenturies, "век", ['век', 'века', 'веков'])
+    if not(resultDecades == 0) and not(resultYears == 0) and not(resultDays == 0) and not(resultHours == 0) and not(resultMinutes == 0) and not(input_number == 0):
+        _outputString += ","
+    elif not(resultDecades == 0) or not(resultYears == 0) or not(resultDays == 0) or not(resultHours == 0) or not(resultMinutes == 0) or not(input_number == 0):
+        _outputString += " и"
 if resultDecades != 0:
     _outputString += " " + str(resultDecades) + " " + _text(resultDecades, "декад", ['декада', 'декады', 'декад'])
+    if not(resultYears == 0) and not(resultDays == 0) and not(resultHours == 0) and not(resultMinutes == 0) and not(input_number == 0):
+        _outputString += ","
+    elif not(resultYears == 0) or not(resultDays == 0) or not(resultHours == 0) or not(resultMinutes == 0) or not(input_number == 0):
+        _outputString += " и"
 if resultYears != 0:
     _outputString += " " + str(resultYears) + " " + _text(resultYears, "год", ['год', 'года', 'лет'])
+    if not(resultDays == 0) and not(resultHours == 0) and not(resultMinutes == 0) and not(input_number == 0):
+        _outputString += ","
+    elif not(resultDays == 0) or not(resultHours == 0) or not(resultMinutes == 0) or not(input_number == 0):
+        _outputString += " и"
 if resultDays != 0:
     _outputString += " " + str(resultDays) + " " + _text(resultDays, "ден", ['день', 'дня', 'дней'])
+    if not(resultHours == 0) and not(resultMinutes == 0) and not(input_number == 0):
+        _outputString += ","
+    elif not(resultHours == 0) or not(resultMinutes == 0) or not(input_number == 0):
+        _outputString += " и"
 if resultHours != 0:
     _outputString += " " + str(resultHours) + " " + _text(resultHours, "час", ['час', 'часа', 'часов'])
+    if not(resultMinutes == 0) and not(input_number == 0):
+        _outputString += ","
+    elif not(resultMinutes == 0) or not(input_number == 0):
+        _outputString += " и"
 if resultMinutes != 0:
     _outputString += " " + str(resultMinutes) + " " + _text(resultMinutes, "минут", ['минута', 'минуты', 'минут'])
+    if not(input_number == 0):
+        _outputString += " и"
 if input_number != 0:
     _outputString += " " + str(input_number) + " " + _text(input_number, "секунд", ['секунда', 'секунды', 'секунд'])
-print(_outputString.lstrip(' '))
+
+_outputString = _outputString.lstrip(' ')
+print(_outputString)
