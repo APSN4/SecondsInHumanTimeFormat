@@ -33,7 +33,7 @@ if resultYears >= 10:
 if resultDecades >= 10:
     resultCenturies, resultDecades = _converter(resultDecades, 10)
 
-def _text(number, name, words):
+def _text(number, words):
     myList = [21, 31, 41, 51, 61, 71, 81, 91]
     number_local = str(number)
     number_local = number_local[len(number_local)-1]
@@ -72,41 +72,41 @@ def _text(number, name, words):
 
 _outputString = ""
 if resultCenturies != 0:
-    _outputString += str(resultCenturies) + " " + _text(resultCenturies, "век", ['век', 'века', 'веков'])
+    _outputString += str(resultCenturies) + " " + _text(resultCenturies, ['век', 'века', 'веков'])
     if not(resultDecades == 0) and not(resultYears == 0) and not(resultDays == 0) and not(resultHours == 0) and not(resultMinutes == 0) and not(input_number == 0):
         _outputString += ","
     elif not(resultDecades == 0) or not(resultYears == 0) or not(resultDays == 0) or not(resultHours == 0) or not(resultMinutes == 0) or not(input_number == 0):
         _outputString += " и"
 if resultDecades != 0:
-    _outputString += " " + str(resultDecades) + " " + _text(resultDecades, "декад", ['декада', 'декады', 'декад'])
+    _outputString += " " + str(resultDecades) + " " + _text(resultDecades, ['декада', 'декады', 'декад'])
     if not(resultYears == 0) and not(resultDays == 0) and not(resultHours == 0) and not(resultMinutes == 0) and not(input_number == 0):
         _outputString += ","
     elif not(resultYears == 0) or not(resultDays == 0) or not(resultHours == 0) or not(resultMinutes == 0) or not(input_number == 0):
         _outputString += " и"
 if resultYears != 0:
-    _outputString += " " + str(resultYears) + " " + _text(resultYears, "год", ['год', 'года', 'лет'])
+    _outputString += " " + str(resultYears) + " " + _text(resultYears, ['год', 'года', 'лет'])
     if not(resultDays == 0) and not(resultHours == 0) and not(resultMinutes == 0) and not(input_number == 0):
         _outputString += ","
     elif not(resultDays == 0) or not(resultHours == 0) or not(resultMinutes == 0) or not(input_number == 0):
         _outputString += " и"
 if resultDays != 0:
-    _outputString += " " + str(resultDays) + " " + _text(resultDays, "ден", ['день', 'дня', 'дней'])
+    _outputString += " " + str(resultDays) + " " + _text(resultDays, ['день', 'дня', 'дней'])
     if not(resultHours == 0) and not(resultMinutes == 0) and not(input_number == 0):
         _outputString += ","
     elif not(resultHours == 0) or not(resultMinutes == 0) or not(input_number == 0):
         _outputString += " и"
 if resultHours != 0:
-    _outputString += " " + str(resultHours) + " " + _text(resultHours, "час", ['час', 'часа', 'часов'])
+    _outputString += " " + str(resultHours) + " " + _text(resultHours, ['час', 'часа', 'часов'])
     if not(resultMinutes == 0) and not(input_number == 0):
         _outputString += ","
     elif not(resultMinutes == 0) or not(input_number == 0):
         _outputString += " и"
 if resultMinutes != 0:
-    _outputString += " " + str(resultMinutes) + " " + _text(resultMinutes, "минут", ['минута', 'минуты', 'минут'])
+    _outputString += " " + str(resultMinutes) + " " + _text(resultMinutes, ['минута', 'минуты', 'минут'])
     if not(input_number == 0):
         _outputString += " и"
 if input_number != 0:
-    _outputString += " " + str(input_number) + " " + _text(input_number, "секунд", ['секунда', 'секунды', 'секунд'])
+    _outputString += " " + str(input_number) + " " + _text(input_number, ['секунда', 'секунды', 'секунд'])
 
 _outputString = _outputString.lstrip(' ')
 print(_outputString)
