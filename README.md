@@ -8,9 +8,28 @@
 [TimeConverterToSeconds] Input `input_time` enter the time format according to the rules.  
   
 # Example
-[TimeConverter]: `2147483647`  
-[TimeConverterToSeconds]: `6 декад, 8 лет, 35 дней, 3 часа, 14 минут и 7 секунд`  
-
+[TimeConverter] `2147483647`  
+[TimeConverterToSeconds] `6 декад, 8 лет, 35 дней, 3 часа, 14 минут и 7 секунд`  
 
 # Output Data
-The checksudoku returns `True` if the sudoku matches the rules of the game, and `False` if the sudoku does not match the rules
+[TimeConverter] return `6 декад, 8 лет, 35 дней, 3 часа, 14 минут и 7 секунд`  
+[TimeConverterToSeconds] return `2147483647`  
+
+# Launch
+_readme.txt_ -  
+
+@APSN4  
+
+Устанавливаем pytest  
+  
+Windows:  
+[CMD]: pytest --verbose --color=yes Tests/test_TimeConverter.py  
+[CMD]: pytest --verbose --color=yes Tests/test_TimeConverterToSeconds.py  
+MacOs:  
+У меня нет мака)) Я думаю, что по запуску аналогично.  
+  
+--verbose (Расширенное пояснение тестов)  
+--color (Цвет)  
+последний параметр - папка_с_тестами/файл  
+  
+без input, потому что некоторые редакторы не поддерживают ввод)  
