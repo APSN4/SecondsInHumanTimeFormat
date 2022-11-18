@@ -34,5 +34,6 @@ MacOs:
   
 без input, потому что некоторые редакторы не поддерживают ввод)  
 
-![image](https://user-images.githubusercontent.com/45320521/202763175-aaade961-750c-41d3-9bde-e36777e4f07f.png)
+![image](https://user-images.githubusercontent.com/45320521/202763549-8bf6f0e4-266f-4fff-a4d5-15e53d284324.png)
+
 
